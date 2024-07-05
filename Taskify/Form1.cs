@@ -17,7 +17,6 @@ namespace Taskify
 
             TaskObj Test = new TaskObj();
             MessageBox.Show(Test.DisplayTaskDetails()); // Testing Display Task Detail Method Works
-            MessageBox.Show(TaskObj.Add()); //Testing Static Method
         }
     }
 }

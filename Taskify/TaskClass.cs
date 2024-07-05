@@ -86,9 +86,6 @@ namespace TaskClass
             return "Task Title: " + TaskTitle + "\nTask Description: " + TaskDescription + "\nTask Due Date: " + TaskDueDate + "\nTask Priority: " + _TaskPriority + "\nTask Status: " + _TaskStatus;
         }
 
-        public static string Add()
-        {
-            return "Task Title";
-        }
+       
     }
 }
