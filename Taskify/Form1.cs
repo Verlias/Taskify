@@ -1,6 +1,5 @@
-using System;
-using System.Windows.Forms;
 using TaskClass;
+using TaskListClass;
 
 
 namespace Taskify
@@ -16,7 +15,12 @@ namespace Taskify
         {
 
             TaskObj Test = new TaskObj();
-            MessageBox.Show(Test.DisplayTaskDetails()); // Testing Display Task Detail Method Works
+            TaskObj Test2 = new TaskObj("Hello World", "Hi", "tmr", TaskObj.TaskPriority.Low, TaskObj.TaskStatus.NotStarted);
+            TaskList list = new TaskList();
+            list.AddTask(Test);
+            list.AddTask(Test2);
+            list.DisplayTaskList();
+            list.RemoveTask(Test2);
         }
     }
 }
