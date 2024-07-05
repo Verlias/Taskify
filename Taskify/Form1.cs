@@ -1,3 +1,4 @@
+using System.Diagnostics.Contracts;
 using TaskClass;
 using TaskListClass;
 
@@ -15,6 +16,11 @@ namespace Taskify
 
             tasklist = new TaskList(); //Instantiate TaskList
             InitializeComponent();
+
+            
+            // Bind tasks to listBox1
+            listBox1.DataSource = tasklist.DisplayTaskList();
+            listBox1.DisplayMember = "Tasktitle";
 
 
         }
@@ -60,5 +66,6 @@ namespace Taskify
         {
             tasklist.DisplayTaskList();
         }
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using System.Collections.Generic;
 using TaskClass;
+using System.Text;
 
 
 
@@ -38,12 +39,12 @@ namespace TaskListClass
 
         }
 
-        public void DisplayTaskList()
+        public Array DisplayTaskList()
         {
-            foreach (TaskObj Task in Tasks)
-            {
-                MessageBox.Show(Task.DisplayTaskDetails());
-            }
+            return Tasks.ToArray();
+
+
+            
         }
 
 
