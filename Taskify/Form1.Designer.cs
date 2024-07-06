@@ -36,11 +36,18 @@
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
             button2 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(48, 171);
+            button1.Location = new Point(713, 377);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -52,28 +59,28 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(586, 26);
+            listBox1.Location = new Point(586, 42);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(202, 274);
+            listBox1.Size = new Size(202, 184);
             listBox1.TabIndex = 9;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(38, 26);
+            textBox1.Location = new Point(688, 232);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(38, 55);
+            textBox2.Location = new Point(688, 261);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(100, 23);
             textBox2.TabIndex = 4;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(38, 84);
+            textBox3.Location = new Point(688, 290);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(100, 23);
             textBox3.TabIndex = 5;
@@ -82,7 +89,7 @@
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Low", "Medium ", "High" });
-            comboBox1.Location = new Point(38, 113);
+            comboBox1.Location = new Point(688, 319);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(100, 23);
             comboBox1.TabIndex = 7;
@@ -91,14 +98,14 @@
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { " NotStarted", " InProgress", " Completed" });
-            comboBox2.Location = new Point(38, 142);
+            comboBox2.Location = new Point(688, 348);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(100, 23);
             comboBox2.TabIndex = 8;
             // 
             // button2
             // 
-            button2.Location = new Point(656, 317);
+            button2.Location = new Point(713, 406);
             button2.Name = "button2";
             button2.Size = new Size(75, 23);
             button2.TabIndex = 10;
@@ -106,11 +113,88 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(590, 236);
+            label1.Name = "label1";
+            label1.Size = new Size(66, 19);
+            label1.TabIndex = 11;
+            label1.Text = "Task Title:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(590, 265);
+            label2.Name = "label2";
+            label2.Size = new Size(81, 19);
+            label2.TabIndex = 12;
+            label2.Text = "Description:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(590, 294);
+            label3.Name = "label3";
+            label3.Size = new Size(70, 19);
+            label3.TabIndex = 13;
+            label3.Text = "Due Date:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(590, 323);
+            label4.Name = "label4";
+            label4.Size = new Size(56, 19);
+            label4.TabIndex = 14;
+            label4.Text = "Priority:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F);
+            label5.Location = new Point(590, 352);
+            label5.Name = "label5";
+            label5.Size = new Size(50, 19);
+            label5.TabIndex = 15;
+            label5.Text = "Status:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.Location = new Point(655, 9);
+            label6.Name = "label6";
+            label6.Size = new Size(67, 21);
+            label6.TabIndex = 16;
+            label6.Text = "Task List";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.Location = new Point(39, 9);
+            label7.Name = "label7";
+            label7.Size = new Size(50, 21);
+            label7.TabIndex = 17;
+            label7.Text = "Timer";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
@@ -135,5 +219,12 @@
         private ComboBox comboBox1;
         private ComboBox comboBox2;
         private Button button2;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
     }
 }
