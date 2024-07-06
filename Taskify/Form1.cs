@@ -9,6 +9,7 @@ namespace Taskify
     {
 
         private TaskList tasklist;
+        int Timer;
 
 
         public Form1()
@@ -91,6 +92,22 @@ namespace Taskify
             {
                 MessageBox.Show("Please select a Task to delete.");
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int timerVal = Timer++;
+            TimerBox.Text = timerVal.ToString();
+        }
+
+        private void StartTimer_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+
+        private void StopTimer_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
         }
     }
 }
