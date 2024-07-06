@@ -79,9 +79,7 @@ namespace Taskify
         private void button2_Click(object sender, EventArgs e)
         {
             //Value may be Null
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
-            var selectedTask = (TaskObj)listBox1.SelectedItem;
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+            var selectedTask = listBox1.SelectedItem as TaskObj;
 
             if (selectedTask != null)
             {
