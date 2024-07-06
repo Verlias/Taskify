@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            button2 = new Button();
             listBox1 = new ListBox();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -47,16 +46,6 @@
             button1.Text = "Add Tasks";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(659, 306);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Display Tasks";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // listBox1
             // 
@@ -117,7 +106,6 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(listBox1);
-            Controls.Add(button2);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Taskify";
@@ -128,7 +116,6 @@
         #endregion
 
         private Button button1;
-        private Button button2;
         private ListBox listBox1;
         private TextBox textBox1;
         private TextBox textBox2;

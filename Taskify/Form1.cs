@@ -17,11 +17,10 @@ namespace Taskify
             tasklist = new TaskList(); //Instantiate TaskList
             InitializeComponent();
 
-            
-            // Bind tasks to listBox1
-            listBox1.DataSource = tasklist.DisplayTaskList();
-            listBox1.DisplayMember = "Tasktitle";
 
+            // Bind tasks to listBox1
+
+            RefreshListBox1();
 
         }
 
@@ -60,11 +59,20 @@ namespace Taskify
 
             MessageBox.Show("Task Added");
 
+            RefreshListBox1();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+    
+        public void RefreshListBox1()
         {
-            tasklist.DisplayTaskList();
+
+            listBox1.DataSource = null;
+            listBox1.DisplayMember = "Tasktitle";
+
+
+            listBox1.DataSource = tasklist.DisplayTaskList();
+            listBox1.DisplayMember = "Tasktitle";
         }
 
     }
