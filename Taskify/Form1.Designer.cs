@@ -35,6 +35,7 @@
             textBox3 = new TextBox();
             comboBox1 = new ComboBox();
             comboBox2 = new ComboBox();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
@@ -54,7 +55,7 @@
             listBox1.Location = new Point(586, 26);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(202, 274);
-            listBox1.TabIndex = 2;
+            listBox1.TabIndex = 9;
             // 
             // textBox1
             // 
@@ -95,11 +96,22 @@
             comboBox2.Size = new Size(100, 23);
             comboBox2.TabIndex = 8;
             // 
+            // button2
+            // 
+            button2.Location = new Point(656, 317);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 10;
+            button2.Text = "Delete Task";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(comboBox2);
             Controls.Add(comboBox1);
             Controls.Add(textBox3);
@@ -122,5 +134,6 @@
         private TextBox textBox3;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
+        private Button button2;
     }
 }

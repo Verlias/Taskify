@@ -18,9 +18,9 @@ namespace Taskify
             InitializeComponent();
 
 
-            // Bind tasks to listBox1
 
             RefreshListBox1();
+
 
         }
 
@@ -30,7 +30,7 @@ namespace Taskify
             string TaskTitle = textBox1.Text;
             string TaskDescription = textBox2.Text;
             string TaskDueDate = textBox3.Text;
-       
+
             TaskClass.TaskObj.TaskPriority TaskPriority = (TaskClass.TaskObj.TaskPriority)comboBox1.SelectedIndex;
 
             if (comboBox1.SelectedIndex == -1)
@@ -63,17 +63,36 @@ namespace Taskify
 
         }
 
-    
-        public void RefreshListBox1()
+        private void RefreshListBox1()
         {
-
             listBox1.DataSource = null;
             listBox1.DisplayMember = "Tasktitle";
 
 
             listBox1.DataSource = tasklist.DisplayTaskList();
             listBox1.DisplayMember = "Tasktitle";
+
         }
 
+
+        //Delete Task
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Value may be Null
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+            var selectedTask = (TaskObj)listBox1.SelectedItem;
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+
+            if (selectedTask != null)
+            {
+
+                tasklist.RemoveTask(selectedTask);
+                RefreshListBox1();
+            }
+            else
+            {
+                MessageBox.Show("Please select a Task to delete.");
+            }
+        }
     }
 }
